@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+#map { height: 100vh; }
+
+aside {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   left: 20px;
+   height: 100vh;
+   z-index: 1000;
+}
+
+.sidebar {
+   background-color: rgba(55, 54, 53, .6);
+   height: 90vh;
+   width: 200px;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   gap: 10px;
+   margin-top: 80px;
+   margin-bottom: 40px;
+   align-items: center;
+   color: white;
+}
+
+.sidebar:hover {
+   background-color: rgba(55, 54, 53, .7);
+}
+
+.sidebar h2 {
+   background-color: rgba(55, 54, 53, .6);
+   width: 100%;
+   border-radius: 10px;
+   text-align: center;
+   padding: 5px;
+   font-family: "Edu SA Beginner", cursive;
+   font-size: 25px;
+}
+
+.sidebar form {
+   display: none;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.sidebar form .field {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+
+.field input,
+select {
+   border: none;
+   outline: none;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+form button {
+   background-color: rgba(55, 54, 53, .6);
+   padding: 5px;
+   color: white;
+   border-radius: 5px;
+   border: none;
+   font-size: 16px;
+   font-weight: 600;
+   margin-top: 10px;
+   cursor: pointer;
+   transition: .3s;
+}
+
+button:hover {
+   scale: 1.05;
+}
+
+ul {
+   list-style: none;
+   font-family: "Poppins", sans-serif;
+   font-size: 12px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   width: 100%;
+   overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+   background-color: rgba(155, 154, 153, .8);
+   width: 6px;
+   border-radius: 3px;
+}
+ul::-webkit-scrollbar-thumb{
+   background-color: rgba(55, 54, 53, .5);
+   border-radius: 3px;
+
+}
+
+li {
+   background-color: green;
+   border-radius: 10px;
+   padding: 10px 5px;
+   position: relative;
+   max-width: 200px;
+}
+
+li td {
+   max-width: 100px;
+   width: calc(100% / 2);
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+li tr td:first-child {
+   font-weight: 800;
+}
+
+li #delete,
+#fly {
+   position: absolute;
+   right: 3px;
+   cursor: pointer;
+   width: 15px;
+   height: 15px;
+   display: grid;
+   place-items: center;
+   border-radius: 50%;
+   transition: .3s;
+}
+
+li #delete {
+   top: 3px;
+}
+
+#delete:hover,
+#fly:hover {
+   background-color: rgba(55, 54, 53, .6);
+   color: red;
+}
+
+li #fly {
+   bottom: 3px;
+   width: 20px;
+   height: 20px;
+}
